@@ -1,37 +1,28 @@
-let app = new Vue({
-  el: "#app",
-  data: {
-    contador: 0,
-    bienvenida: "Bienvenido a Vue 2 !!!",
-    carta: {
-      imagen:"https://www.cooperativa.cl/noticias/site/artic/20211028/imag/foto_0000000220211028101430.jpg",
-      titulo:"pato gigante",
-      descripcion: "patitos de hule nadando",
-      boton: "ver precio",
-      precio: 5000,
-    },
-    precioIva: 0
-  },
+const app=new Vue({
+  el:"#app",
+  data:{
+      pacientes:[
+          {
+              socio:"1234",
+              nombre:"Juan Perez",
+              telefono:"1111111",
+              email:"4567@pepe.com"
+          },
+          {
+              socio:"3456",
+              nombre:"Marina Gomez",
+              telefono:"11222222",
+              email:"4567@pepe.com"
+          },
+          {
+              socio:"5678",
+              nombre:"Ignacio Hernandez",
+              telefono:"1113333",
+              email:"4567@pepe.com"
+          }
+      ],
+      colorverde:"text-success",
   
-  methods: {
-    mostrarPrecio() {
-      alert(`Este ${this.carta.titulo} sale $ ${this.carta.precio}`);
-    },
-    calcularIva() {
-      this.precioIva = this.carta.precio * 1.21;
-      return this.precioIva;
-    },
-    sumarUno(){
-        return this.contador++;
-        
-    },
-    restarUno(){
-        return this.contador--;
-    },
-  },
- computed: {
-   
-   
-
-  },
+  }
 });
+
