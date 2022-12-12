@@ -1,4 +1,4 @@
-Vue.component("componente-buscador", {
+Vue.component("ComponenteBuscador", {
     data: function () {
       return {
         buscado: "",
