@@ -1,46 +1,14 @@
 <template>
   <div id="app">
-    <img alt="coder logo" class="logo-small" src="./assets/logo.jpg">
-    <FormularioWeb />
-    <RegistroWeb />
+    <nav>
+      <router-link to="/">Inicio</router-link> |
+      <router-link to="/buscador">Buscador de productos</router-link> |
+      <router-link to="/formulario">Formulario</router-link>
+    </nav>
     
+    <router-view/>
   </div>
 </template>
-
-<script>
-import FormularioWeb from './components/FormularioWeb.vue'
-import RegistroWeb from './components/RegistroWeb.vue'
-
-
-export default {
-  name: 'App',
-  pacientes:[
-          {
-              socio:"1234",
-              nombre:"Juan Perez",
-              telefono:"1111111",
-              email:"4567@pepe.com"
-          },
-          {
-              socio:"3456",
-              nombre:"Marina Gomez",
-              telefono:"11222222",
-              email:"4567@pepe.com"
-          },
-          {
-              socio:"5678",
-              nombre:"Ignacio Hernandez",
-              telefono:"1113333",
-              email:"4567@pepe.com"
-          }
-      ],
-      colorverde:"text-success",
-  components: {
-    FormularioWeb,
-    RegistroWeb
-  }
-}
-</script>
 
 <style>
 #app {
@@ -49,6 +17,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

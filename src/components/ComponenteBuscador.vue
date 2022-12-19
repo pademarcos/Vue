@@ -1,16 +1,5 @@
-Vue.component("ComponenteBuscador", {
-    data: function () {
-      return {
-        buscado: "",
-        encontrado: "",
-      };
-    },
-    props: {
-      pacientes: Array,
-      estilo: String,
-    },
-  
-    template: /*html*/ `
+<template>
+  <div>
           <div>
               <h4 :class="estilo">Buscador de Pacientes (socios:1234, 3456, 5678)</h4>
               <input type="number" placeholder="Numero de paciente" v-model="buscado">
@@ -43,9 +32,27 @@ Vue.component("ComponenteBuscador", {
                   </div>
           </div>
           </div>
-      `,
-    methods: {
-      buscar() {
+</template>
+
+<script>
+export default {
+  name: 'ComponenteBuscador',
+
+  data: function () {
+      return {
+        buscado: "",
+        encontrado: "",
+      };
+    },
+    props: {
+      pacientes: Array,
+      estilo: String,
+    },
+
+
+
+  methods: {
+    buscar() {
         this.encontrado = this.pacientes.find(
           (cliente) => cliente.socio == this.buscado
         );
@@ -56,6 +63,8 @@ Vue.component("ComponenteBuscador", {
           }, 3000);
         }
       },
-    },
-  });
-  
+  },
+};
+</script>
+
+
