@@ -20,7 +20,7 @@ const routes = [
     path: '/formulario',
     name: 'formulario',
     
-    component: () => import('../views/BuscadorView.vue')
+    component: () => import('../views/FormularioView.vue')
   }
 ]
 
