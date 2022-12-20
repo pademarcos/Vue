@@ -1,18 +1,15 @@
 <template>
   <div class="home">
-    
-    <HelloWorld msg="Welcome to Your SPA App"/>
+    <HomeComponent />
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HomeComponent from '@/components/HomeComponent.vue';
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+    name: "HomeView",
+    components: { HomeComponent }
 }
 </script>

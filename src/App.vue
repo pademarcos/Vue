@@ -1,14 +1,25 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Inicio</router-link> |
-      <router-link to="/buscador">Buscador de productos</router-link> |
-      <router-link to="/formulario">Formulario</router-link>
-    </nav>
-    
+    <div v-if="$store.getters.getUsuActivo">
+      <UsuarioComponente />
+            
+      <nav>
+        <router-link to="/">Inicio</router-link> |
+        <router-link to="/buscador">Buscador de productos</router-link> |
+        <router-link to="/formulario">Formulario</router-link>
+      </nav>
+    </div>
     <router-view/>
   </div>
 </template>
+<script>
+import UsuarioComponente from './components/UsuarioComponente.vue';
+
+export default {
+    name: "App",
+    components: { UsuarioComponente }
+};
+</script>
 
 
 <style>

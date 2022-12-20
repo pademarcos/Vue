@@ -1,6 +1,7 @@
 <template>
   <div>
           <div>
+            
               <h4 :class="estilo">Buscador de Pacientes (socios:1234, 3456, 5678)</h4>
               <input type="number" placeholder="Numero de paciente" v-model="buscado">
               <button @click="buscar" class="btn btn-secondary">🔍</button>
