@@ -24,9 +24,21 @@ export default {
 
     data() {
         return {
+            listaUsuarios:[],
             user:'',
             password:''
         };
+    },
+    created(){
+        const URLGET="https://63a33e61471b38b2060a3374.mockapi.io/listaUsuarios";
+        fetch(URLGET)
+        .then(response => response.json())
+        .then(data => {
+            this.listaUsuarios = data;
+            console.log(this.listaUsuarios);
+        })
+
+
     },
 
     methods: {
